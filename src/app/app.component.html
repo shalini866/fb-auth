@@ -1,0 +1,10 @@
+<button (click)="signInWithFB()" *ngIf="!loggedIn">Login with fb</button>
+
+
+<div *ngIf="loggedIn">
+  <img src="{{user.response.picture.data.url}}">
+  <div>
+    <h3>{{user.name}}</h3>
+    <p>{{user.email}}</p>
+  </div>
+</div>
